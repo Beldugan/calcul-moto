@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcul motoare moto</title>
+<meta name="description" content="Calculul motoarelor MAS în doi și patru timpi pentru vehicule cu două roți: ciclul, baleiajul și camera de expansiune, dinamica și echilibrarea, răcirea, transmisia, performanțele și consumul WMTC – aplicația îndrumarului de proiect, Universitatea „Ovidius” din Constanța.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f5f9e'/%3E%3Ccircle cx='9' cy='21' r='5' fill='none' stroke='white' stroke-width='2.2'/%3E%3Ccircle cx='23' cy='21' r='5' fill='none' stroke='white' stroke-width='2.2'/%3E%3Cpath d='M9 21l5-8h6l3 8M14 13h-3' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="antet">
+  <div class="antet-text">
+    <h1>Calculul motoarelor de motocicletă (MAS 2T și 4T)</h1>
+    <p>Proiectarea sistemelor de propulsie cu MAS în doi și patru timpi ale vehiculelor cu două roți – îndrumar de proiect · Universitatea „Ovidius” din Constanța · FIMIM</p>
+  </div>
+  <div class="antet-butoane">
+    <button type="button" id="btn-csv">Diagrama indicată (CSV)</button>
+    <button type="button" id="btn-print">Tipărește</button>
+  </div>
+</header>
+
+<main class="pagina">
+  <section class="date" aria-label="Date de intrare">
+    <h2>Date de proiectare</h2>
+    <p class="nota">Alegeți exemplul de pornire, apoi completați datele temei. Intervalele recomandate sunt în Tabelul 1.1 din îndrumar. Calculul se reia automat la fiecare modificare.</p>
+    <div class="exemple">
+      <span>Exemple din îndrumar:</span>
+      <button type="button" data-preset="EX2T">2T 300 cm³ (cap. 10)</button>
+      <button type="button" data-preset="EX4T">4T 690 cm³ (cap. 11)</button>
+    </div>
+    <form id="formular" autocomplete="off"></form>
+  </section>
+
+  <section class="rezultate" aria-label="Rezultate">
+    <div id="sumar" class="sumar"></div>
+    <nav class="taburi" id="taburi" role="tablist"></nav>
+    <div id="continut"></div>
+  </section>
+</main>
+
+<footer class="subsol">
+  <p>Metoda: calculul clasic al ciclului MAS cu proprietățile reale ale gazelor (îndrumarul PCMAI, ed. a II-a); la 2T cursa utilă, baleiajul după modelul Benson–Brandham, destinderea liberă integrată numeric și camera de expansiune după relația lui Jennings; caracteristica Leiderman cu cuplul maxim impus; dinamica și echilibrarea monocilindrului; răcirea cu aer; transmisia în trepte și CVT ideal; consumul pe WMTC cu linia Willans. Rezultatele sunt identice cu cele din îndrumar.</p>
+  <p>Ș.l. univ. dr. ing. Camil Tudor · Asist. univ. drd. Adrian-Mircea Beldugan · Universitatea „Ovidius” din Constanța, 2026</p>
+</footer>
+
+<script src="tabele.js"></script>
+<script src="wmtc.js"></script>
+<script src="presets.js"></script>
+<script src="moto.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
